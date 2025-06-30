@@ -1,0 +1,143 @@
+/* Basic Reset & Body Styling */
+body {
+    font-family: 'Inter', sans-serif; /* Using Google Font Inter, fallback to sans-serif */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5; /* Light grey background */
+    color: #333;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Include padding/border in element's total width/height */
+}
+
+.container {
+    background: #ffffff; /* White background for the content box */
+    padding: 40px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 700px; /* Max width for content */
+    width: 90%; /* Responsive width */
+    text-align: center;
+    margin: 20px; /* Add some margin for smaller screens */
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2c3e50; /* Darker blue-grey for main heading */
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    font-weight: 700; /* Bold */
+}
+
+/* The .headline class is no longer directly used in index.html, but can remain in CSS */
+.headline { 
+    color: #3498db; 
+    font-size: 1.4em;
+    font-weight: 600; 
+    margin-top: 0;
+}
+
+section {
+    margin-bottom: 25px;
+    text-align: left; /* Align section text to the left */
+}
+
+section h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    border-bottom: 2px solid #ecf0f1; /* Light grey separator */
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+section p {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Style for embedded links within paragraphs (e.g., in "About Me") */
+section p a {
+    color: #3498db; /* Blue color for embedded links */
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+section p a:hover {
+    color: #2980b9; /* Darker blue on hover */
+    text-decoration: none;
+}
+
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow links to wrap */
+    justify-content: center; /* Center links */
+    gap: 15px; /* Space between links */
+    margin-top: 20px;
+}
+
+.links li {
+    background-color: #3498db; /* Blue background for link buttons */
+    border-radius: 8px;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-grow: 1; /* Allow items to grow to fill space */
+    min-width: 180px; /* Minimum width for readability */
+}
+
+.links li:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.links a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    display: block; /* Make the whole li clickable via padding */
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #7f8c8d; /* Muted grey for footer */
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .headline {
+        font-size: 1.2em;
+    }
+
+    .container {
+        padding: 20px;
+        width: 95%; /* Adjust width for very small screens */
+        margin: 10px;
+    }
+
+    .links ul {
+        flex-direction: column; /* Stack links vertically on small screens */
+        align-items: stretch; /* Stretch to full width */
+    }
+
+    .links li {
+        min-width: unset; /* Remove min-width when stacked */
+    }
+}
